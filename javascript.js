@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hangman Game</title>
-		<!--  CSS  -->
-<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css/style.css">
-
-
-		<!--  google font for h1 -->
-<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
-</head>
-<body>
-		<!--  this is the title  -->
-	<div>
-		<h1> HANGMAN <br> HIT ARTISTS!</h1>
-	</div>
-		<div id="game">
-
-		</div>
-
-		<!--  this is the body  -->
-	<div class= "container">	
-			<header>
-			<h2> Press any letter to begin. Try and guess the HIT ARTIST. </h2>
-			</header>
-
-			<p id="wins">Wins</p>
-			<p id="word">Current Word</p>
-			<p id="hold">__________ </p>
-			<p id="guessesleft">Number of guesses remaining</p>
-			<p id="guessed">Letters already guessed</p>
-	</div>
-<script type="text/javascript">
-		
-		var words = ['bruno mars','drake', 'kanye', 'calvin harris'];
+var words = ['bruno mars','drake', 'kanye', 'calvin harris'];
 		var computerGuess = (words[Math.floor(Math.random()*words.length)]);
 		var lives = 8;
 		var missed;
@@ -100,21 +63,3 @@
 
 
 }
-
-
-
-		
-			
-
-		
-
-
-
-
-	</script>
-
-
-
-
-</body>
-</html>

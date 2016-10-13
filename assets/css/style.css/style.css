@@ -1,0 +1,33 @@
+body {
+    background-color: #000000;
+}
+h1{
+	font-family: 'Bubblegum Sans', cursive;
+	text-align: center;
+	color: #98FF33;
+	font-size: 95px;
+}
+h2{
+	color: #ffffff;
+	text-align: center;	
+}
+#wins{
+	color: #ffffff;
+	text-align: center;
+}
+#word{
+	color: #ffffff;
+	text-align: center;
+}
+#guessesleft{
+	color: #ffffff;
+	text-align: center;
+}
+#guessed{
+	color: #ffffff;
+	text-align: center;
+}
+#hold{
+	color: #ffffff;
+	text-align: center;
+}
