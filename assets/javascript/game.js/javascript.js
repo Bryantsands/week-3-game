@@ -1,39 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hangman Game</title>
-		<!--  CSS  -->
-<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-
-
-
-		<!--  google font for h1 -->
-<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
-</head>
-<body>
-		<!--  this is the title  -->
-	<div>
-		<h1> HANGMAN <br> HIT ARTISTS!</h1>
-	</div>
-		<div id="game">
-
-		</div>
-
-		<!--  this is the body  -->
-	<div class= "container">	
-			<header>
-			<h2> Press any letter to begin. Try and guess the HIT ARTIST. </h2>
-			</header>
-
-			
-			<p id="word">Current Word</p>
-			<p id="guessed">Letters already guessed</p>
-			<p id="guessesleft">Number of guesses remaining</p>
-	</div>
-<script type="text/javascript">
-
 var words = ['bruno mars','drake', 'kanye', 'calvin harris'];
 		var computerGuess = (words[Math.floor(Math.random()*words.length)]);
 		var lives = 8;
@@ -56,7 +20,7 @@ var words = ['bruno mars','drake', 'kanye', 'calvin harris'];
 	}
 	document.getElementById("guessed").innerHTML = (
 		storeWrong.join(""));
-	document.getElementById("guessesleft").innerHTML=("You have this many guesses left: " + lives);
+	document.getElementById("guessesleft").innerHTML=("Number of guesses left: " + lives);
 
 	document.onkeyup = function(event) {
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
@@ -71,7 +35,7 @@ var words = ['bruno mars','drake', 'kanye', 'calvin harris'];
 				missed = true;
 				}
 			else if((i === (computerGuess.length-1))
-				&& (missed == false)){
+				&& (missed== false)){
 				console.log("Wrong!!! You guessed " +
 					userGuess);
 				storeWrong[wins] = userGuess;
@@ -81,26 +45,21 @@ var words = ['bruno mars','drake', 'kanye', 'calvin harris'];
 		}
 		console.log(storeCorrect.join(""));
 		document.getElementById("word").innerHTML = (
-			storeCorrect.join(" "));
-		console.log(storeWrong.join(" "));
-		document.getElementById("guessed").innerHTML = (storeWrong.join(""))
+			storeCorrect.join(""));
+		console.log(storeWrong.join(""));
+		document.getElementById("missed").innerHTML = (
+			storeWrong.join(""))
 		console.log("Number of lives left: " + lives);
-		document.getElementById("guessesleft").innerHTML = (
+		document.getElementById("lives").innerHTML = (
 			"Number of lives left: " + lives);
 		//condition of ending
 		if(lives == 0){
-			alert("game over ")
+			console.log("game over ")
 		}
 
 		else if(storeCorrect.join("")== computerGuess){
-			alert("Great job! You win! Press any key to continue!");
+			console.log("Great job! You win! Press any key to continue!");
 		}
 
 
 }
-
-
-
-</script>
-</body>
-</html>
