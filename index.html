@@ -39,7 +39,7 @@ var words = ['bruno mars','drake', 'kanye', 'calvin harris'];
 		var lives = 8;
 		var missed;
 		var wins = 0;
-		  // store correct letters here
+		  // store correct letters here--->
   	var storeCorrect = [];
 	
   	//start array for correct
@@ -61,6 +61,8 @@ var words = ['bruno mars','drake', 'kanye', 'calvin harris'];
 	document.onkeyup = function(event) {
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
+
+	//console response for correct or incorrect could use alert 
 	missed = false
 	for (var i = 0; i < computerGuess.length; i++)
 			{
@@ -79,15 +81,19 @@ var words = ['bruno mars','drake', 'kanye', 'calvin harris'];
 				lives--;
 			}
 		}
+		
+		//storing data from var to id
 		console.log(storeCorrect.join(""));
 		document.getElementById("word").innerHTML = (
-			storeCorrect.join(" "));
+			storeCorrect.join(""));
 		console.log(storeWrong.join(" "));
 		document.getElementById("guessed").innerHTML = (storeWrong.join(""))
 		console.log("Number of lives left: " + lives);
 		document.getElementById("guessesleft").innerHTML = (
 			"Number of lives left: " + lives);
-		//condition of ending
+		
+
+		//alert for ending
 		if(lives == 0){
 			alert("game over ")
 		}
